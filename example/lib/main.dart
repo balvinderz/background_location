@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> {
                         message: "Background location in progress",
                         icon: "@mipmap/ic_launcher",
                     );
-                    await BackgroundLocation.setAndroidConfiguration(1000);
+                    await BackgroundLocation.setAndroidConfiguration(interval : 1000);
                     await BackgroundLocation.startLocationService();
                     BackgroundLocation.getLocationUpdates((location) {
                       setState(() {
